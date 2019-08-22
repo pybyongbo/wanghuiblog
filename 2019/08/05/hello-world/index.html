@@ -5,21 +5,24 @@
   
 
   
-  <title>前端小测第一期(css布局) | Hexo</title>
+  <title>前端小测第一期(css布局) | zhangxinxu-quiz前端小测题目</title>
   <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
-  <meta name="description" content="前端小测-css小测第一期题目: 一个简单也很常用的布局,左右排列的布局,左侧是标签信息,右侧是描述信息.如下图所示:">
+  <meta name="description" content="前端小测-css小测第一期题目: 一个简单也很常用的布局,左右排列的布局,左侧是标签信息,右侧是描述信息.如下图所示: 分别以几种不同的方式实现,不定宽度,有次自适应,考虑文字多行情况,和一些边界情况字数较多或者添加栏目等等~">
 <meta property="og:type" content="article">
 <meta property="og:title" content="前端小测第一期(css布局)">
 <meta property="og:url" content="http://yoursite.com/2019/08/05/hello-world/index.html">
-<meta property="og:site_name" content="Hexo">
-<meta property="og:description" content="前端小测-css小测第一期题目: 一个简单也很常用的布局,左右排列的布局,左侧是标签信息,右侧是描述信息.如下图所示:">
-<meta property="og:locale" content="default">
-<meta property="og:updated_time" content="2019-08-05T09:41:21.257Z">
+<meta property="og:site_name" content="zhangxinxu-quiz前端小测题目">
+<meta property="og:description" content="前端小测-css小测第一期题目: 一个简单也很常用的布局,左右排列的布局,左侧是标签信息,右侧是描述信息.如下图所示: 分别以几种不同的方式实现,不定宽度,有次自适应,考虑文字多行情况,和一些边界情况字数较多或者添加栏目等等~">
+<meta property="og:locale" content="zh-CN">
+<meta property="og:image" content="https://images.901web.com/2019-08-20-072743.png">
+<meta property="og:image" content="https://images.901web.com/2019-08-20-072155.jpg">
+<meta property="og:updated_time" content="2019-08-20T07:28:17.046Z">
 <meta name="twitter:card" content="summary">
 <meta name="twitter:title" content="前端小测第一期(css布局)">
-<meta name="twitter:description" content="前端小测-css小测第一期题目: 一个简单也很常用的布局,左右排列的布局,左侧是标签信息,右侧是描述信息.如下图所示:">
+<meta name="twitter:description" content="前端小测-css小测第一期题目: 一个简单也很常用的布局,左右排列的布局,左侧是标签信息,右侧是描述信息.如下图所示: 分别以几种不同的方式实现,不定宽度,有次自适应,考虑文字多行情况,和一些边界情况字数较多或者添加栏目等等~">
+<meta name="twitter:image" content="https://images.901web.com/2019-08-20-072743.png">
   
-    <link rel="alternate" href="/atom.xml" title="Hexo" type="application/atom+xml">
+    <link rel="alternate" href="/atom.xml" title="zhangxinxu-quiz前端小测题目" type="application/atom+xml">
   
   
     <link rel="icon" href="/favicon.png">
@@ -38,7 +41,7 @@
   <div id="header-outer" class="outer">
     <div id="header-title" class="inner">
       <h1 id="logo-wrap">
-        <a href="/" id="logo">Hexo</a>
+        <a href="/" id="logo">zhangxinxu-quiz前端小测题目</a>
       </h1>
       
     </div>
@@ -55,7 +58,7 @@
         
           <a id="nav-rss-link" class="nav-icon" href="/atom.xml" title="RSS Feed"></a>
         
-        <a id="nav-search-btn" class="nav-icon" title="Search"></a>
+        <a id="nav-search-btn" class="nav-icon" title="搜索"></a>
       </nav>
       <div id="search-form-wrap">
         <form action="//google.com/search" method="get" accept-charset="UTF-8" class="search-form"><input type="search" name="q" class="search-form-input" placeholder="Search"><button type="submit" class="search-form-submit">&#xF002;</button><input type="hidden" name="sitesearch" value="http://yoursite.com"></form>
@@ -88,8 +91,11 @@
       
         <p>前端小测-css小测第一期题目:</p>
 <p>一个简单也很常用的布局,左右排列的布局,左侧是标签信息,右侧是描述信息.如下图所示:</p>
+<p>分别以几种不同的方式实现,不定宽度,有次自适应,考虑文字多行情况,和一些边界情况字数较多或者添加栏目等等~</p>
+<p><img src="https://images.901web.com/2019-08-20-072743.png" alt="移动端左右布局"></p>
 <a id="more"></a>
 
+<p><img src="https://images.901web.com/2019-08-20-072155.jpg" alt="移动端布局"></p>
 <p>已知HTML代码结构(HTML代码结构不能改变)</p>
 <figure class="highlight html"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br></pre></td><td class="code"><pre><span class="line"><span class="tag">&lt;<span class="name">dl</span>&gt;</span></span><br><span class="line">    <span class="tag">&lt;<span class="name">dt</span>&gt;</span>手机系统<span class="tag">&lt;/<span class="name">dt</span>&gt;</span></span><br><span class="line">    <span class="tag">&lt;<span class="name">dd</span>&gt;</span>Android<span class="tag">&lt;/<span class="name">dd</span>&gt;</span></span><br><span class="line"></span><br><span class="line">    <span class="tag">&lt;<span class="name">dt</span>&gt;</span>登录方式<span class="tag">&lt;/<span class="name">dt</span>&gt;</span></span><br><span class="line">    <span class="tag">&lt;<span class="name">dd</span>&gt;</span>QQ互联网登录<span class="tag">&lt;/<span class="name">dd</span>&gt;</span></span><br><span class="line"></span><br><span class="line">    <span class="tag">&lt;<span class="name">dt</span>&gt;</span>登录时间<span class="tag">&lt;/<span class="name">dt</span>&gt;</span></span><br><span class="line">    <span class="tag">&lt;<span class="name">dd</span>&gt;</span>2019-01-02 11:10<span class="tag">&lt;/<span class="name">dd</span>&gt;</span></span><br><span class="line"></span><br><span class="line">    <span class="tag">&lt;<span class="name">dt</span>&gt;</span>绑定状态<span class="tag">&lt;/<span class="name">dt</span>&gt;</span></span><br><span class="line">    <span class="tag">&lt;<span class="name">dd</span>&gt;</span>有效<span class="tag">&lt;/<span class="name">dd</span>&gt;</span></span><br><span class="line"><span class="tag">&lt;/<span class="name">dl</span>&gt;</span></span><br></pre></td></tr></table></figure>
 
@@ -101,13 +107,27 @@
       
     </div>
     <footer class="article-footer">
-      <a data-url="http://yoursite.com/2019/08/05/hello-world/" data-id="cjyy7s9qw0000rr9h48gaetle" class="article-share-link">Share</a>
+      <a data-url="http://yoursite.com/2019/08/05/hello-world/" data-id="cjzm9d1xd00053q9hwyjl97o8" class="article-share-link">Share</a>
       
       
     </footer>
   </div>
   
     
+<nav id="article-nav">
+  
+    <a href="/2019/08/20/css-quiz-2/" id="article-nav-newer" class="article-nav-link-wrap">
+      <strong class="article-nav-caption">Newer</strong>
+      <div class="article-nav-title">
+        
+          前端小测第二期(css基础)
+        
+      </div>
+    </a>
+  
+  
+</nav>
+
   
 </article>
 
@@ -125,9 +145,9 @@
   
     
   <div class="widget-wrap">
-    <h3 class="widget-title">Archives</h3>
+    <h3 class="widget-title">归档</h3>
     <div class="widget">
-      <ul class="archive-list"><li class="archive-list-item"><a class="archive-list-link" href="/archives/2019/08/">August 2019</a></li></ul>
+      <ul class="archive-list"><li class="archive-list-item"><a class="archive-list-link" href="/archives/2019/08/">八月 2019</a></li></ul>
     </div>
   </div>
 
@@ -135,12 +155,28 @@
   
     
   <div class="widget-wrap">
-    <h3 class="widget-title">Recent Posts</h3>
+    <h3 class="widget-title">最新文章</h3>
     <div class="widget">
       <ul>
         
           <li>
-            <a href="/2019/08/05/hello-world/">前端小测第一期(css布局)</a>
+            <a href="/2019/08/22/dom-quiz-34/">前端小测DOM基础测试34(节点遍历)</a>
+          </li>
+        
+          <li>
+            <a href="/2019/08/20/dom-quiz-35/">前端小测DOM基础(表单)</a>
+          </li>
+        
+          <li>
+            <a href="/2019/08/20/css-quiz-34/">前端小测第四期(css选择器)</a>
+          </li>
+        
+          <li>
+            <a href="/2019/08/20/css-quiz-31/">前端小测第三期(css布局)</a>
+          </li>
+        
+          <li>
+            <a href="/2019/08/20/css-quiz-2/">前端小测第二期(css基础)</a>
           </li>
         
       </ul>
@@ -155,7 +191,7 @@
   
   <div class="outer">
     <div id="footer-info" class="inner">
-      &copy; 2019 John Doe<br>
+      &copy; 2019 pybyongbo<br>
       Powered by <a href="http://hexo.io/" target="_blank">Hexo</a>
     </div>
   </div>
