@@ -1,0 +1,261 @@
+<!DOCTYPE html>
+<html>
+<head><meta name="generator" content="Hexo 3.9.0">
+  <meta charset="utf-8">
+  
+
+  
+  <title>JS基础测试34期(js数组相关) | zhangxinxu-quiz前端小测题目</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
+  <meta name="description" content="简答题所有题目共用一个上下文,已知数组: 1let arr = [1,2,,3];   数组arr的长度是多少 去除数组arr中的空项 arr2 = arr.map(parseInt),请写下arr2的内容 arr和arr2合并成数组arr3,兼容IE8+ 去除数组 arr3 中重复的内容">
+<meta property="og:type" content="article">
+<meta property="og:title" content="JS基础测试34期(js数组相关)">
+<meta property="og:url" content="http://wanghui.901web.com/2019/08/23/js-quiz-34/index.html">
+<meta property="og:site_name" content="zhangxinxu-quiz前端小测题目">
+<meta property="og:description" content="简答题所有题目共用一个上下文,已知数组: 1let arr = [1,2,,3];   数组arr的长度是多少 去除数组arr中的空项 arr2 = arr.map(parseInt),请写下arr2的内容 arr和arr2合并成数组arr3,兼容IE8+ 去除数组 arr3 中重复的内容">
+<meta property="og:locale" content="zh-CN">
+<meta property="og:image" content="https://images.901web.com/2019-08-23-085819.png">
+<meta property="og:updated_time" content="2019-08-29T03:28:26.016Z">
+<meta name="twitter:card" content="summary">
+<meta name="twitter:title" content="JS基础测试34期(js数组相关)">
+<meta name="twitter:description" content="简答题所有题目共用一个上下文,已知数组: 1let arr = [1,2,,3];   数组arr的长度是多少 去除数组arr中的空项 arr2 = arr.map(parseInt),请写下arr2的内容 arr和arr2合并成数组arr3,兼容IE8+ 去除数组 arr3 中重复的内容">
+<meta name="twitter:image" content="https://images.901web.com/2019-08-23-085819.png">
+  
+    <link rel="alternate" href="/atom.xml" title="zhangxinxu-quiz前端小测题目" type="application/atom+xml">
+  
+  
+    <link rel="icon" href="/favicon.png">
+  
+  
+    <link href="//fonts.googleapis.com/css?family=Source+Code+Pro" rel="stylesheet" type="text/css">
+  
+  <link rel="stylesheet" href="/css/style.css">
+</head>
+</html>
+<body>
+  <div id="container">
+    <div id="wrap">
+      <header id="header">
+  <div id="banner"></div>
+  <div id="header-outer" class="outer">
+    <div id="header-title" class="inner">
+      <h1 id="logo-wrap">
+        <a href="/" id="logo">zhangxinxu-quiz前端小测题目</a>
+      </h1>
+      
+    </div>
+    <div id="header-inner" class="inner">
+      <nav id="main-nav">
+        <a id="main-nav-toggle" class="nav-icon"></a>
+        
+          <a class="main-nav-link" href="/">Home</a>
+        
+          <a class="main-nav-link" href="/archives">Archives</a>
+        
+      </nav>
+      <nav id="sub-nav">
+        
+          <a id="nav-rss-link" class="nav-icon" href="/atom.xml" title="RSS Feed"></a>
+        
+        <a id="nav-search-btn" class="nav-icon" title="搜索"></a>
+      </nav>
+      <div id="search-form-wrap">
+        <form action="//google.com/search" method="get" accept-charset="UTF-8" class="search-form"><input type="search" name="q" class="search-form-input" placeholder="Search"><button type="submit" class="search-form-submit">&#xF002;</button><input type="hidden" name="sitesearch" value="http://wanghui.901web.com"></form>
+      </div>
+    </div>
+  </div>
+</header>
+      <div class="outer">
+        <section id="main"><article id="post-js-quiz-34" class="article article-type-post" itemscope itemprop="blogPost">
+  <div class="article-meta">
+    <a href="/2019/08/23/js-quiz-34/" class="article-date">
+  <time datetime="2019-08-23T08:45:46.614Z" itemprop="datePublished">2019-08-23</time>
+</a>
+    
+  </div>
+  <div class="article-inner">
+    
+    
+      <header class="article-header">
+        
+  
+    <h1 class="article-title" itemprop="name">
+      JS基础测试34期(js数组相关)
+    </h1>
+  
+
+      </header>
+    
+    <div class="article-entry" itemprop="articleBody">
+      
+        <h3 id="简答题"><a href="#简答题" class="headerlink" title="简答题"></a>简答题</h3><p>所有题目共用一个上下文,已知数组:</p>
+<figure class="highlight javascript"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">let</span> arr = [<span class="number">1</span>,<span class="number">2</span>,,<span class="number">3</span>];</span><br></pre></td></tr></table></figure>
+
+<ol>
+<li>数组arr的长度是多少</li>
+<li>去除数组arr中的空项</li>
+<li>arr2 = arr.map(parseInt),请写下arr2的内容</li>
+<li>arr和arr2合并成数组arr3,兼容IE8+</li>
+<li>去除数组 arr3 中重复的内容</li>
+</ol>
+<a id="more"></a>
+
+<p>下面请开始你的表演:</p>
+<h3 id="大佬解答"><a href="#大佬解答" class="headerlink" title="大佬解答"></a>大佬解答</h3><ol>
+<li>空数组项也会作为length的一部分;空数组项和空字符串项是有区别的.</li>
+</ol>
+<figure class="highlight js"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line"><span class="built_in">console</span>.log(arr.length);<span class="comment">//4</span></span><br></pre></td></tr></table></figure>
+
+<ol start="2">
+<li>本题只是过滤空数组项，不包括null, undefined这类。</li>
+</ol>
+<figure class="highlight js"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">arr.filter(<span class="function"><span class="params">e</span>=&gt;</span><span class="literal">true</span>);</span><br></pre></td></tr></table></figure>
+
+<p><img src="https://images.901web.com/2019-08-23-085819.png" alt="过滤数组空项"></p>
+<p>2-1. 去除空数组项两个比较好的回答:</p>
+<ul>
+<li><p>数组中的 empty 元素不会参与数组项遍历，故只需返回 true 即可过滤掉 empty 元素（而不会牵连 0、NaN、null、undefined、’’ 这些）arr.filter(it =&gt; true)。然后补充，但是走for循环，还是会遍历empty数组项。</p>
+</li>
+<li><p>或者filter方法参数直接就是一个<code>function</code>即可.例如：<del>arr.filter(Boolean)</del>（纠正：不能是Boolean，false会被过滤），arr.filter(Number)， arr.filter(String)</p>
+</li>
+<li><p>上面并不会最好的方法。数组有个API，天然去除空数组项，<code>arr.flat()</code>。<code>flat()</code>可以让数组扁平化的方法。</p>
+</li>
+</ul>
+<ol start="3">
+<li><p>第3题标准答案应该是[1, NaN, NaN]，map里面Function支持参数(value, index, arr)</p>
+<p>解析：parseInt 接收 string 和 radix 两个参数，前者是待转换的字符串，后者是进制参考基数，默认是 10。当 parseInt 作为 map 方法的回调函数时，parseInt 的 string 的实参是数组项，radix 的实参是数组索引值，故执行过程如下：</p>
+</li>
+</ol>
+<figure class="highlight javascript"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line"><span class="built_in">parseInt</span>(<span class="number">1</span>, <span class="number">0</span>);  <span class="comment">// 1. `radix` 为 0 时会自动转换成 10，故输出 1</span></span><br><span class="line"><span class="built_in">parseInt</span>(<span class="number">2</span>, <span class="number">1</span>);  <span class="comment">// 2. `radix` 值非法（没有一进制），无法解析，故输出 NaN</span></span><br><span class="line"><span class="built_in">parseInt</span>(<span class="number">3</span>, <span class="number">2</span>);  <span class="comment">// 3. `string` 为 3 ，`radix` 为 2，无法将 3 按二进制解析，故输出 NaN</span></span><br></pre></td></tr></table></figure>
+
+<ol start="4">
+<li>arr和arr2合并成数组arr3,兼容IE8+</li>
+</ol>
+<figure class="highlight javascript"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">var</span> arr3 = arr.concat(arr2);</span><br><span class="line"><span class="built_in">console</span>.log(arr3);<span class="comment">//[1,2,3,1,NaN,NaN]</span></span><br></pre></td></tr></table></figure>
+
+<ol start="5">
+<li>去除arr3中重复的内容:</li>
+</ol>
+<p>解析:利用ES6中的Set集合不存在重复项的特点来去重</p>
+<figure class="highlight javascript"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">var</span> arr3 = [...new <span class="built_in">Set</span>(arr3)];</span><br><span class="line"><span class="built_in">console</span>.log(arr3); <span class="comment">//[1,2,3,NaN]</span></span><br></pre></td></tr></table></figure>
+      
+    </div>
+    <footer class="article-footer">
+      <a data-url="http://wanghui.901web.com/2019/08/23/js-quiz-34/" data-id="cl1fpxiw8000km6g99dcjlt52" class="article-share-link">Share</a>
+      
+      
+    </footer>
+  </div>
+  
+    
+<nav id="article-nav">
+  
+    <a href="/2019/08/26/css-quiz-10/" id="article-nav-newer" class="article-nav-link-wrap">
+      <strong class="article-nav-caption">Newer</strong>
+      <div class="article-nav-title">
+        
+          CSS基础测试(布局相关)
+        
+      </div>
+    </a>
+  
+  
+    <a href="/2019/08/23/js-quiz-29/" id="article-nav-older" class="article-nav-link-wrap">
+      <strong class="article-nav-caption">Older</strong>
+      <div class="article-nav-title">JS基础测试29期(js对象，数组相关)</div>
+    </a>
+  
+</nav>
+
+  
+</article>
+
+</section>
+        
+          <aside id="sidebar">
+  
+    
+
+  
+    
+
+  
+    
+  
+    
+  <div class="widget-wrap">
+    <h3 class="widget-title">归档</h3>
+    <div class="widget">
+      <ul class="archive-list"><li class="archive-list-item"><a class="archive-list-link" href="/archives/2022/03/">三月 2022</a></li><li class="archive-list-item"><a class="archive-list-link" href="/archives/2021/12/">十二月 2021</a></li><li class="archive-list-item"><a class="archive-list-link" href="/archives/2021/11/">十一月 2021</a></li><li class="archive-list-item"><a class="archive-list-link" href="/archives/2021/09/">九月 2021</a></li><li class="archive-list-item"><a class="archive-list-link" href="/archives/2021/07/">七月 2021</a></li><li class="archive-list-item"><a class="archive-list-link" href="/archives/2019/08/">八月 2019</a></li></ul>
+    </div>
+  </div>
+
+
+  
+    
+  <div class="widget-wrap">
+    <h3 class="widget-title">最新文章</h3>
+    <div class="widget">
+      <ul>
+        
+          <li>
+            <a href="/2022/03/27/js-es5-deepClone/">JS基础-ES5深拷贝函数封装</a>
+          </li>
+        
+          <li>
+            <a href="/2022/03/24/js-array-to-tree/">js数组与树形结构互转</a>
+          </li>
+        
+          <li>
+            <a href="/2021/12/06/js-array-flat-tree/">js数组数据格式的处理(CRM后管)</a>
+          </li>
+        
+          <li>
+            <a href="/2021/11/28/js-array-tips/">js数组方法小技巧</a>
+          </li>
+        
+          <li>
+            <a href="/2021/11/12/js-array-object-unique/">js实现数组去重,普通项与对象项</a>
+          </li>
+        
+      </ul>
+    </div>
+  </div>
+
+  
+</aside>
+        
+      </div>
+      <footer id="footer">
+  
+  <div class="outer">
+    <div id="footer-info" class="inner">
+      &copy; 2022 pybyongbo<br>
+      Powered by <a href="http://hexo.io/" target="_blank">Hexo</a>
+    </div>
+  </div>
+</footer>
+    </div>
+    <nav id="mobile-nav">
+  
+    <a href="/" class="mobile-nav-link">Home</a>
+  
+    <a href="/archives" class="mobile-nav-link">Archives</a>
+  
+</nav>
+    
+
+<script src="//ajax.googleapis.com/ajax/libs/jquery/2.0.3/jquery.min.js"></script>
+
+
+  <link rel="stylesheet" href="/fancybox/jquery.fancybox.css">
+  <script src="/fancybox/jquery.fancybox.pack.js"></script>
+
+
+<script src="/js/script.js"></script>
+
+
+
+  </div>
+</body>
+</html>
