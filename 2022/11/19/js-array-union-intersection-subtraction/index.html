@@ -5,15 +5,19 @@
   
 
   
-  <title>zhangxinxu-quiz前端小测题目</title>
+  <title>JavaScript数组求并集，交集和差集 | zhangxinxu-quiz前端小测题目</title>
   <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
-  <meta property="og:type" content="website">
-<meta property="og:title" content="zhangxinxu-quiz前端小测题目">
-<meta property="og:url" content="http://wanghui.901web.com/index.html">
+  <meta name="description" content="现有两数组 a = [1, 2, 3]，b = [2, 4, 5]，求 a，b 数组的并集，交集和差集。 1、ES7 方法 ES7 新增了一个 Array.prototype.includes 的数组方法，用于返回一个数组是否包含指定元素，结合 filter 方法。 12345678// 并集let union = a.concat(b.filter((v) =&amp;gt; !a.includes(v">
+<meta property="og:type" content="article">
+<meta property="og:title" content="JavaScript数组求并集，交集和差集">
+<meta property="og:url" content="http://wanghui.901web.com/2022/11/19/js-array-union-intersection-subtraction/index.html">
 <meta property="og:site_name" content="zhangxinxu-quiz前端小测题目">
+<meta property="og:description" content="现有两数组 a = [1, 2, 3]，b = [2, 4, 5]，求 a，b 数组的并集，交集和差集。 1、ES7 方法 ES7 新增了一个 Array.prototype.includes 的数组方法，用于返回一个数组是否包含指定元素，结合 filter 方法。 12345678// 并集let union = a.concat(b.filter((v) =&amp;gt; !a.includes(v">
 <meta property="og:locale" content="zh-CN">
+<meta property="og:updated_time" content="2022-11-19T03:42:40.004Z">
 <meta name="twitter:card" content="summary">
-<meta name="twitter:title" content="zhangxinxu-quiz前端小测题目">
+<meta name="twitter:title" content="JavaScript数组求并集，交集和差集">
+<meta name="twitter:description" content="现有两数组 a = [1, 2, 3]，b = [2, 4, 5]，求 a，b 数组的并集，交集和差集。 1、ES7 方法 ES7 新增了一个 Array.prototype.includes 的数组方法，用于返回一个数组是否包含指定元素，结合 filter 方法。 12345678// 并集let union = a.concat(b.filter((v) =&amp;gt; !a.includes(v">
   
     <link rel="alternate" href="/atom.xml" title="zhangxinxu-quiz前端小测题目" type="application/atom+xml">
   
@@ -60,9 +64,7 @@
   </div>
 </header>
       <div class="outer">
-        <section id="main">
-  
-    <article id="post-js-array-union-intersection-subtraction" class="article article-type-post" itemscope itemprop="blogPost">
+        <section id="main"><article id="post-js-array-union-intersection-subtraction" class="article article-type-post" itemscope itemprop="blogPost">
   <div class="article-meta">
     <a href="/2022/11/19/js-array-union-intersection-subtraction/" class="article-date">
   <time datetime="2022-11-19T03:34:06.489Z" itemprop="datePublished">2022-11-19</time>
@@ -75,8 +77,8 @@
       <header class="article-header">
         
   
-    <h1 itemprop="name">
-      <a class="article-title" href="/2022/11/19/js-array-union-intersection-subtraction/">JavaScript数组求并集，交集和差集</a>
+    <h1 class="article-title" itemprop="name">
+      JavaScript数组求并集，交集和差集
     </h1>
   
 
@@ -113,186 +115,19 @@
     </footer>
   </div>
   
-</article>
-
-
+    
+<nav id="article-nav">
   
-    <article id="post-js-groupBy" class="article article-type-post" itemscope itemprop="blogPost">
-  <div class="article-meta">
-    <a href="/2022/11/19/js-groupBy/" class="article-date">
-  <time datetime="2022-11-19T02:48:56.607Z" itemprop="datePublished">2022-11-19</time>
-</a>
-    
-  </div>
-  <div class="article-inner">
-    
-    
-      <header class="article-header">
-        
   
-    <h1 itemprop="name">
-      <a class="article-title" href="/2022/11/19/js-groupBy/">JS实现Array.groupBy</a>
-    </h1>
+    <a href="/2022/11/19/js-groupBy/" id="article-nav-older" class="article-nav-link-wrap">
+      <strong class="article-nav-caption">Older</strong>
+      <div class="article-nav-title">JS实现Array.groupBy</div>
+    </a>
   
+</nav>
 
-      </header>
-    
-    <div class="article-entry" itemprop="articleBody">
-      
-        <p>现在，对产品列表执行一个简单的操作，将产品按类别分组。例如有如下数据,根据<code>category</code>字段进行分组:</p>
-<figure class="highlight javascript"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">const</span> products = [</span><br><span class="line">  &#123;</span><br><span class="line">    name: <span class="string">"apples"</span>,</span><br><span class="line">    category: <span class="string">"fruits"</span>,</span><br><span class="line">  &#125;,</span><br><span class="line">  &#123;</span><br><span class="line">    name: <span class="string">"oranges"</span>,</span><br><span class="line">    category: <span class="string">"fruits"</span>,</span><br><span class="line">  &#125;,</span><br><span class="line">  &#123;</span><br><span class="line">    name: <span class="string">"potatoes"</span>,</span><br><span class="line">    category: <span class="string">"vegetable"</span>,</span><br><span class="line">  &#125;,</span><br><span class="line">];</span><br></pre></td></tr></table></figure>
-        
-          <p class="article-more-link">
-            <a href="/2022/11/19/js-groupBy/#more">Read More</a>
-          </p>
-        
-      
-    </div>
-    <footer class="article-footer">
-      <a data-url="http://wanghui.901web.com/2022/11/19/js-groupBy/" data-id="clandu08i000ktzg9eyy9b4i4" class="article-share-link">Share</a>
-      
-      
-    </footer>
-  </div>
   
 </article>
-
-
-  
-    <article id="post-filter-by-fields" class="article article-type-post" itemscope itemprop="blogPost">
-  <div class="article-meta">
-    <a href="/2022/10/30/filter-by-fields/" class="article-date">
-  <time datetime="2022-10-30T02:49:55.876Z" itemprop="datePublished">2022-10-30</time>
-</a>
-    
-  </div>
-  <div class="article-inner">
-    
-    
-      <header class="article-header">
-        
-  
-    <h1 itemprop="name">
-      <a class="article-title" href="/2022/10/30/filter-by-fields/">从对象数组中根据某一个字段进行筛选数据</a>
-    </h1>
-  
-
-      </header>
-    
-    <div class="article-entry" itemprop="articleBody">
-      
-        <p>JS 中数组者对象中,根据另外一个数组中的数据进行筛选数据.例如如下场景:</p>
-<p>有两个数组对象,一个数组对象中的值是另外一个数组对象中的某个字段的值的集合,我们需要筛选出集合字段的 item 对象的集合</p>
-        
-          <p class="article-more-link">
-            <a href="/2022/10/30/filter-by-fields/#more">Read More</a>
-          </p>
-        
-      
-    </div>
-    <footer class="article-footer">
-      <a data-url="http://wanghui.901web.com/2022/10/30/filter-by-fields/" data-id="clandu07v0005tzg97176125q" class="article-share-link">Share</a>
-      
-      
-    </footer>
-  </div>
-  
-</article>
-
-
-  
-    <article id="post-js-quiz-26" class="article article-type-post" itemscope itemprop="blogPost">
-  <div class="article-meta">
-    <a href="/2022/04/16/js-quiz-26/" class="article-date">
-  <time datetime="2022-04-16T02:32:16.247Z" itemprop="datePublished">2022-04-16</time>
-</a>
-    
-  </div>
-  <div class="article-inner">
-    
-    
-      <header class="article-header">
-        
-  
-    <h1 itemprop="name">
-      <a class="article-title" href="/2022/04/16/js-quiz-26/">获取HTML页面有多少种标签</a>
-    </h1>
-  
-
-      </header>
-    
-    <div class="article-entry" itemprop="articleBody">
-      
-        <p>前端小测-JS 算法题目(数组相关):</p>
-<p><strong>注意是获取页面有多少种标签,不是多少个</strong></p>
-<p>已知如下 html 页面:</p>
-        
-          <p class="article-more-link">
-            <a href="/2022/04/16/js-quiz-26/#more">Read More</a>
-          </p>
-        
-      
-    </div>
-    <footer class="article-footer">
-      <a data-url="http://wanghui.901web.com/2022/04/16/js-quiz-26/" data-id="clandu08m000ntzg9p8vod3yf" class="article-share-link">Share</a>
-      
-      
-    </footer>
-  </div>
-  
-</article>
-
-
-  
-    <article id="post-js-quiz-27" class="article article-type-post" itemscope itemprop="blogPost">
-  <div class="article-meta">
-    <a href="/2022/04/16/js-quiz-27/" class="article-date">
-  <time datetime="2022-04-16T02:21:37.605Z" itemprop="datePublished">2022-04-16</time>
-</a>
-    
-  </div>
-  <div class="article-inner">
-    
-    
-      <header class="article-header">
-        
-  
-    <h1 itemprop="name">
-      <a class="article-title" href="/2022/04/16/js-quiz-27/">JS数组相关几道算法面试题</a>
-    </h1>
-  
-
-      </header>
-    
-    <div class="article-entry" itemprop="articleBody">
-      
-        <p>前端小测-JS 算法题目(数组相关):</p>
-<h3 id="将数字转为整数数组"><a href="#将数字转为整数数组" class="headerlink" title="将数字转为整数数组:"></a>将数字转为整数数组:</h3><p>已知数组:</p>
-<figure class="highlight js"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">let</span> num = <span class="number">13579</span>; <span class="comment">// =&gt; [1,3,5,7,9];</span></span><br></pre></td></tr></table></figure>
-        
-          <p class="article-more-link">
-            <a href="/2022/04/16/js-quiz-27/#more">Read More</a>
-          </p>
-        
-      
-    </div>
-    <footer class="article-footer">
-      <a data-url="http://wanghui.901web.com/2022/04/16/js-quiz-27/" data-id="clandu08k000mtzg9afdxhjv0" class="article-share-link">Share</a>
-      
-      
-    </footer>
-  </div>
-  
-</article>
-
-
-  
-
-
-  <nav id="page-nav">
-    
-    <span class="page-number current">1</span><a class="page-number" href="/page/2/">2</a><a class="page-number" href="/page/3/">3</a><span class="space">&hellip;</span><a class="page-number" href="/page/6/">6</a><a class="extend next" rel="next" href="/page/2/">下一页 &raquo;</a>
-  </nav>
 
 </section>
         

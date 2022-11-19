@@ -62,6 +62,90 @@
       <div class="outer">
         <section id="main">
   
+    <article id="post-js-empty-obj" class="article article-type-post" itemscope itemprop="blogPost">
+  <div class="article-meta">
+    <a href="/2021/07/23/js-empty-obj/" class="article-date">
+  <time datetime="2021-07-23T02:47:14.071Z" itemprop="datePublished">2021-07-23</time>
+</a>
+    
+  </div>
+  <div class="article-inner">
+    
+    
+      <header class="article-header">
+        
+  
+    <h1 itemprop="name">
+      <a class="article-title" href="/2021/07/23/js-empty-obj/">如何判断空对象</a>
+    </h1>
+  
+
+      </header>
+    
+    <div class="article-entry" itemprop="articleBody">
+      
+        <p>如何判断一个对象是否为空对象?即是否是<code>{}</code>这样的对象. 在做业务开发过程中,有时候我们会遇到空对象,要进行单独的处理,可能有时候就要进行空对象的判断.</p>
+<p>下面总结了几种判断一个对象是否为空对象的方法:</p>
+        
+          <p class="article-more-link">
+            <a href="/2021/07/23/js-empty-obj/#more">Read More</a>
+          </p>
+        
+      
+    </div>
+    <footer class="article-footer">
+      <a data-url="http://wanghui.901web.com/2021/07/23/js-empty-obj/" data-id="clandu08g000jtzg9vp1bkzc5" class="article-share-link">Share</a>
+      
+      
+    </footer>
+  </div>
+  
+</article>
+
+
+  
+    <article id="post-find-string-count" class="article article-type-post" itemscope itemprop="blogPost">
+  <div class="article-meta">
+    <a href="/2021/07/22/find-string-count/" class="article-date">
+  <time datetime="2021-07-22T01:59:30.553Z" itemprop="datePublished">2021-07-22</time>
+</a>
+    
+  </div>
+  <div class="article-inner">
+    
+    
+      <header class="article-header">
+        
+  
+    <h1 itemprop="name">
+      <a class="article-title" href="/2021/07/22/find-string-count/">找出字符串出现最多次数的字符</a>
+    </h1>
+  
+
+      </header>
+    
+    <div class="article-entry" itemprop="articleBody">
+      
+        <p>JS中一些数组,字符串相关的常用方法,扁平化数组,计算数组中某个值出现的次数等…</p>
+<h3 id="eg-例如-给定字符串"><a href="#eg-例如-给定字符串" class="headerlink" title="eg(例如):  给定字符串"></a>eg(例如):  给定字符串</h3><figure class="highlight javascript"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br></pre></td><td class="code"><pre><span class="line"></span><br><span class="line"><span class="keyword">var</span> str = <span class="string">"sakfjksdjffffffff"</span>;</span><br><span class="line"></span><br><span class="line"><span class="function"><span class="keyword">function</span> <span class="title">getMostFrequenceLetter</span>(<span class="params">str</span>)</span>&#123;</span><br><span class="line">    <span class="keyword">var</span> i = <span class="number">0</span>,</span><br><span class="line">        len = str.length,</span><br><span class="line">        dict = &#123;&#125;,</span><br><span class="line">        list = [];</span><br><span class="line">    <span class="keyword">for</span> (; i&lt;len; i++) &#123;</span><br><span class="line">        <span class="keyword">var</span> c = str[i];<span class="comment">//char</span></span><br><span class="line">        dict[c] = dict[c]? (dict[c]+<span class="number">1</span>):<span class="number">1</span>;</span><br><span class="line">        list[dict[c]] = c;</span><br><span class="line">    &#125;;</span><br><span class="line"></span><br><span class="line">    <span class="keyword">return</span> list.slice(<span class="number">-1</span>);</span><br><span class="line">&#125;</span><br><span class="line"></span><br><span class="line">getMostFrequenceLetter(str);</span><br></pre></td></tr></table></figure>
+        
+          <p class="article-more-link">
+            <a href="/2021/07/22/find-string-count/#more">Read More</a>
+          </p>
+        
+      
+    </div>
+    <footer class="article-footer">
+      <a data-url="http://wanghui.901web.com/2021/07/22/find-string-count/" data-id="clandu087000ctzg91pq5zd5i" class="article-share-link">Share</a>
+      
+      
+    </footer>
+  </div>
+  
+</article>
+
+
+  
     <article id="post-split-array" class="article article-type-post" itemscope itemprop="blogPost">
   <div class="article-meta">
     <a href="/2021/07/12/split-array/" class="article-date">
@@ -94,7 +178,7 @@
       
     </div>
     <footer class="article-footer">
-      <a data-url="http://wanghui.901web.com/2021/07/12/split-array/" data-id="cl9usyyzr000pykg9b5j5eo5w" class="article-share-link">Share</a>
+      <a data-url="http://wanghui.901web.com/2021/07/12/split-array/" data-id="clandu08r000rtzg93pnvwmd7" class="article-share-link">Share</a>
       
       
     </footer>
@@ -142,7 +226,7 @@
       
     </div>
     <footer class="article-footer">
-      <a data-url="http://wanghui.901web.com/2019/08/26/css-quiz-10/" data-id="cl9usyyys0000ykg9n57hmmws" class="article-share-link">Share</a>
+      <a data-url="http://wanghui.901web.com/2019/08/26/css-quiz-10/" data-id="clandu07j0000tzg9nagdzkrp" class="article-share-link">Share</a>
       
       
     </footer>
@@ -192,111 +276,7 @@
       
     </div>
     <footer class="article-footer">
-      <a data-url="http://wanghui.901web.com/2019/08/23/js-quiz-34/" data-id="cl9usyyzp000nykg988tqi614" class="article-share-link">Share</a>
-      
-      
-    </footer>
-  </div>
-  
-</article>
-
-
-  
-    <article id="post-js-quiz-29" class="article article-type-post" itemscope itemprop="blogPost">
-  <div class="article-meta">
-    <a href="/2019/08/23/js-quiz-29/" class="article-date">
-  <time datetime="2019-08-23T06:37:53.260Z" itemprop="datePublished">2019-08-23</time>
-</a>
-    
-  </div>
-  <div class="article-inner">
-    
-    
-      <header class="article-header">
-        
-  
-    <h1 itemprop="name">
-      <a class="article-title" href="/2019/08/23/js-quiz-29/">JS基础测试29期(js对象，数组相关)</a>
-    </h1>
-  
-
-      </header>
-    
-    <div class="article-entry" itemprop="articleBody">
-      
-        <h3 id="简答题"><a href="#简答题" class="headerlink" title="简答题:"></a>简答题:</h3><p>1.已知纯对象:</p>
-<figure class="highlight js"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">let</span> obj1 = &#123;<span class="attr">a</span>:<span class="number">1</span>,<span class="attr">b</span>:<span class="number">2</span>&#125;;</span><br><span class="line"><span class="keyword">let</span> obj2 = &#123;<span class="attr">a</span>:<span class="number">1</span>,<span class="attr">b</span>:<span class="number">2</span>&#125;;</span><br></pre></td></tr></table></figure>
-
-<p>1 我们都知道,obj1 == obj2 返回的值是false,下面请写一个方法,如果键值对都是一样的(只需要原生相等),则认为两个对象是相等的.例如:</p>
-<figure class="highlight js"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">let</span> obj1 = &#123;<span class="attr">a</span>:<span class="number">1</span>,<span class="attr">b</span>:<span class="number">2</span>&#125;;</span><br><span class="line"><span class="keyword">let</span> obj2 = &#123;<span class="attr">a</span>:<span class="number">1</span>,<span class="attr">b</span>:<span class="number">2</span>&#125;;</span><br><span class="line"></span><br><span class="line">equalObject(obj1,obj2);<span class="comment">//返回true</span></span><br></pre></td></tr></table></figure>
-
-<p>已知数组:</p>
-<figure class="highlight js"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">let</span> arr1 = [<span class="number">1</span>,<span class="number">2</span>,<span class="number">5</span>,<span class="number">7</span>,<span class="number">9</span>];</span><br><span class="line"><span class="keyword">let</span> arr2 = [<span class="number">1</span>,<span class="number">2</span>,<span class="number">5</span>,<span class="number">7</span>,<span class="number">9</span>];</span><br></pre></td></tr></table></figure>
-
-<p>2.大家都知道,arr1 == arr2返回的是false,下面写一个方法,如果数组项都是一样的,(只需考虑原生相等)则认为两个数组是相等的.例如:</p>
-<figure class="highlight js"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line">equalArray([<span class="number">1</span>,<span class="number">2</span>],[<span class="number">2</span>,<span class="number">1</span>]); <span class="comment">//返回true</span></span><br><span class="line">equalArray([<span class="number">1</span>,<span class="number">2</span>],[<span class="string">'1'</span>,<span class="string">'2'</span>]); <span class="comment">//返回false</span></span><br></pre></td></tr></table></figure>
-
-<p>3.本题加大难度,相当于1,2题目的组合,请实现一个方法,只要内容形态一致,则认为数组或者对象相等.例如:</p>
-<figure class="highlight js"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">let</span> obj1 = &#123;<span class="attr">a</span>:[<span class="number">1</span>,<span class="string">'2'</span>],<span class="attr">b</span>:<span class="number">2</span>&#125;;</span><br><span class="line"><span class="keyword">let</span> obj2 = &#123;<span class="attr">b</span>:<span class="number">2</span>,<span class="attr">a</span>:[<span class="number">1</span>,<span class="string">'2'</span>]&#125;;</span><br><span class="line"></span><br><span class="line"><span class="keyword">let</span> arr1 = [<span class="number">1</span>,<span class="number">2</span>,&#123;<span class="attr">a</span>:<span class="number">1</span>,<span class="attr">b</span>:<span class="number">2</span>&#125;,<span class="number">9</span>];</span><br><span class="line"><span class="keyword">let</span> arr2 = [<span class="number">1</span>,<span class="number">2</span>,&#123;<span class="attr">b</span>:<span class="number">2</span>,<span class="attr">a</span>:<span class="number">1</span>&#125;,<span class="number">9</span>];</span><br><span class="line"></span><br><span class="line"><span class="built_in">console</span>.log(equal(obj1,obj2)); <span class="comment">//返回true</span></span><br><span class="line"><span class="built_in">console</span>.log(equal(arr1,arr2));<span class="comment">//返回true</span></span><br><span class="line"><span class="built_in">console</span>.log(equal(obj1,arr1));<span class="comment">//返回false</span></span><br></pre></td></tr></table></figure>
-
-<p><em><code>补充：数组 [1, 2] 和 [2, 1] 是不等的</code></em>。</p>
-        
-          <p class="article-more-link">
-            <a href="/2019/08/23/js-quiz-29/#more">Read More</a>
-          </p>
-        
-      
-    </div>
-    <footer class="article-footer">
-      <a data-url="http://wanghui.901web.com/2019/08/23/js-quiz-29/" data-id="cl9usyyzo000mykg915b4re0e" class="article-share-link">Share</a>
-      
-      
-    </footer>
-  </div>
-  
-</article>
-
-
-  
-    <article id="post-js-quiz-35" class="article article-type-post" itemscope itemprop="blogPost">
-  <div class="article-meta">
-    <a href="/2019/08/22/js-quiz-35/" class="article-date">
-  <time datetime="2019-08-22T07:35:53.254Z" itemprop="datePublished">2019-08-22</time>
-</a>
-    
-  </div>
-  <div class="article-inner">
-    
-    
-      <header class="article-header">
-        
-  
-    <h1 itemprop="name">
-      <a class="article-title" href="/2019/08/22/js-quiz-35/">JS基础测试35期(js对象相关)</a>
-    </h1>
-  
-
-      </header>
-    
-    <div class="article-entry" itemprop="articleBody">
-      
-        <h3 id="简答题"><a href="#简答题" class="headerlink" title="简答题:"></a>简答题:</h3><p>所有题目共用一个上下文<br>已知对象:<br> <figure class="highlight js"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">const</span> object1 = &#123;</span><br><span class="line">    userid:<span class="number">123</span>,</span><br><span class="line">    username:<span class="string">'王二'</span>,</span><br><span class="line">    tel:<span class="string">'13208033621'</span></span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure></p>
-<ul>
-<li>一句话说明encodeURI和encodeURIComponent的主要区别?</li>
-<li>把object1转变成userid=123&amp;username=%E7%8E%8B%E4%BA%8C这种字符串形式</li>
-<li>获取当前URL地址栏中的第一个?后面查询的内容(包括问号)</li>
-<li>把?后面的查询字符串转换成object1 这样的键值对对象格式</li>
-<li>如果键值有重复,则值以数组呈现.</li>
-</ul>
-        
-          <p class="article-more-link">
-            <a href="/2019/08/22/js-quiz-35/#more">Read More</a>
-          </p>
-        
-      
-    </div>
-    <footer class="article-footer">
-      <a data-url="http://wanghui.901web.com/2019/08/22/js-quiz-35/" data-id="cl9usyyzq000oykg96h5xaf48" class="article-share-link">Share</a>
+      <a data-url="http://wanghui.901web.com/2019/08/23/js-quiz-34/" data-id="clandu08p000ptzg9je635cse" class="article-share-link">Share</a>
       
       
     </footer>
@@ -329,7 +309,7 @@
   <div class="widget-wrap">
     <h3 class="widget-title">归档</h3>
     <div class="widget">
-      <ul class="archive-list"><li class="archive-list-item"><a class="archive-list-link" href="/archives/2022/10/">十月 2022</a></li><li class="archive-list-item"><a class="archive-list-link" href="/archives/2022/04/">四月 2022</a></li><li class="archive-list-item"><a class="archive-list-link" href="/archives/2022/03/">三月 2022</a></li><li class="archive-list-item"><a class="archive-list-link" href="/archives/2021/12/">十二月 2021</a></li><li class="archive-list-item"><a class="archive-list-link" href="/archives/2021/11/">十一月 2021</a></li><li class="archive-list-item"><a class="archive-list-link" href="/archives/2021/09/">九月 2021</a></li><li class="archive-list-item"><a class="archive-list-link" href="/archives/2021/07/">七月 2021</a></li><li class="archive-list-item"><a class="archive-list-link" href="/archives/2019/08/">八月 2019</a></li></ul>
+      <ul class="archive-list"><li class="archive-list-item"><a class="archive-list-link" href="/archives/2022/11/">十一月 2022</a></li><li class="archive-list-item"><a class="archive-list-link" href="/archives/2022/10/">十月 2022</a></li><li class="archive-list-item"><a class="archive-list-link" href="/archives/2022/04/">四月 2022</a></li><li class="archive-list-item"><a class="archive-list-link" href="/archives/2022/03/">三月 2022</a></li><li class="archive-list-item"><a class="archive-list-link" href="/archives/2021/12/">十二月 2021</a></li><li class="archive-list-item"><a class="archive-list-link" href="/archives/2021/11/">十一月 2021</a></li><li class="archive-list-item"><a class="archive-list-link" href="/archives/2021/09/">九月 2021</a></li><li class="archive-list-item"><a class="archive-list-link" href="/archives/2021/07/">七月 2021</a></li><li class="archive-list-item"><a class="archive-list-link" href="/archives/2019/08/">八月 2019</a></li></ul>
     </div>
   </div>
 
@@ -342,6 +322,14 @@
       <ul>
         
           <li>
+            <a href="/2022/11/19/js-array-union-intersection-subtraction/">JavaScript数组求并集，交集和差集</a>
+          </li>
+        
+          <li>
+            <a href="/2022/11/19/js-groupBy/">JS实现Array.groupBy</a>
+          </li>
+        
+          <li>
             <a href="/2022/10/30/filter-by-fields/">从对象数组中根据某一个字段进行筛选数据</a>
           </li>
         
@@ -351,14 +339,6 @@
         
           <li>
             <a href="/2022/04/16/js-quiz-27/">JS数组相关几道算法面试题</a>
-          </li>
-        
-          <li>
-            <a href="/2022/04/07/js-algorithm-1/">十几道前端基础算法题目,你都会了吗?</a>
-          </li>
-        
-          <li>
-            <a href="/2022/03/27/js-es5-deepClone/">JS基础-ES5深拷贝函数封装</a>
           </li>
         
       </ul>
