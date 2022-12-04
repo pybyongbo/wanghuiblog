@@ -1,0 +1,242 @@
+<!DOCTYPE html>
+<html>
+<head><meta name="generator" content="Hexo 3.9.0">
+  <meta charset="utf-8">
+  
+
+  
+  <title>解析 [1, 2, 3].map(parseInt)【JS面试题】 | zhangxinxu-quiz前端小测题目</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
+  <meta name="description" content="有如下面试题,打印输出的结果. 1const res = [1, 2, 3].map(parseInt);">
+<meta name="keywords" content="JS面试题,map,parseInt">
+<meta property="og:type" content="article">
+<meta property="og:title" content="解析 [1, 2, 3].map(parseInt)【JS面试题】">
+<meta property="og:url" content="http://wanghui.901web.com/2022/12/04/js-map-parseInt/index.html">
+<meta property="og:site_name" content="zhangxinxu-quiz前端小测题目">
+<meta property="og:description" content="有如下面试题,打印输出的结果. 1const res = [1, 2, 3].map(parseInt);">
+<meta property="og:locale" content="zh-CN">
+<meta property="og:image" content="https://images.901web.com/2022-12-04-131651.png">
+<meta property="og:updated_time" content="2022-12-04T13:33:27.660Z">
+<meta name="twitter:card" content="summary">
+<meta name="twitter:title" content="解析 [1, 2, 3].map(parseInt)【JS面试题】">
+<meta name="twitter:description" content="有如下面试题,打印输出的结果. 1const res = [1, 2, 3].map(parseInt);">
+<meta name="twitter:image" content="https://images.901web.com/2022-12-04-131651.png">
+  
+    <link rel="alternate" href="/atom.xml" title="zhangxinxu-quiz前端小测题目" type="application/atom+xml">
+  
+  
+    <link rel="icon" href="/favicon.png">
+  
+  
+    <link href="//fonts.googleapis.com/css?family=Source+Code+Pro" rel="stylesheet" type="text/css">
+  
+  <link rel="stylesheet" href="/css/style.css">
+</head>
+</html>
+<body>
+  <div id="container">
+    <div id="wrap">
+      <header id="header">
+  <div id="banner"></div>
+  <div id="header-outer" class="outer">
+    <div id="header-title" class="inner">
+      <h1 id="logo-wrap">
+        <a href="/" id="logo">zhangxinxu-quiz前端小测题目</a>
+      </h1>
+      
+    </div>
+    <div id="header-inner" class="inner">
+      <nav id="main-nav">
+        <a id="main-nav-toggle" class="nav-icon"></a>
+        
+          <a class="main-nav-link" href="/">Home</a>
+        
+          <a class="main-nav-link" href="/archives">Archives</a>
+        
+      </nav>
+      <nav id="sub-nav">
+        
+          <a id="nav-rss-link" class="nav-icon" href="/atom.xml" title="RSS Feed"></a>
+        
+        <a id="nav-search-btn" class="nav-icon" title="搜索"></a>
+      </nav>
+      <div id="search-form-wrap">
+        <form action="//google.com/search" method="get" accept-charset="UTF-8" class="search-form"><input type="search" name="q" class="search-form-input" placeholder="Search"><button type="submit" class="search-form-submit">&#xF002;</button><input type="hidden" name="sitesearch" value="http://wanghui.901web.com"></form>
+      </div>
+    </div>
+  </div>
+</header>
+      <div class="outer">
+        <section id="main"><article id="post-js-map-parseInt" class="article article-type-post" itemscope itemprop="blogPost">
+  <div class="article-meta">
+    <a href="/2022/12/04/js-map-parseInt/" class="article-date">
+  <time datetime="2022-12-04T13:06:23.955Z" itemprop="datePublished">2022-12-04</time>
+</a>
+    
+  </div>
+  <div class="article-inner">
+    
+    
+      <header class="article-header">
+        
+  
+    <h1 class="article-title" itemprop="name">
+      解析 [1, 2, 3].map(parseInt)【JS面试题】
+    </h1>
+  
+
+      </header>
+    
+    <div class="article-entry" itemprop="articleBody">
+      
+        <p>有如下面试题,打印输出的结果.</p>
+<figure class="highlight javascript"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">const</span> res = [<span class="number">1</span>, <span class="number">2</span>, <span class="number">3</span>].map(<span class="built_in">parseInt</span>);</span><br></pre></td></tr></table></figure>
+
+<a id="more"></a>
+
+<p>其实正确的输出结果是[1,NaN,NaN],这道题目主要是考察 parseInt 的第二个参数.</p>
+<p><strong>实际上并不是转化为如下代码:</strong></p>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line">const res2 = [1,2,3].map((item)=&gt;&#123;</span><br><span class="line">    return parseInt(item);</span><br><span class="line">&#125;)</span><br></pre></td></tr></table></figure>
+
+<p><code>parseInt</code> 其实有两个参数,第一个是元素,第二个是基数(为几进制数) parseInt(元素,基数)</p>
+<p><img src="https://images.901web.com/2022-12-04-131651.png" alt="控制台打印"></p>
+<p>完整形式其实应该是如下:</p>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line">const res3 = [1,2,3].map((item,index)=&gt;&#123;</span><br><span class="line">  return parseInt(item,index);</span><br><span class="line">&#125;)</span><br></pre></td></tr></table></figure>
+
+<ul>
+<li>parseInt(1,0) -&gt; 1</li>
+<li>parseInt(2,1) -&gt; NaN</li>
+<li>parseInt(3,2) -&gt; NaN</li>
+</ul>
+<p>B 站视频讲解:</p>
+<p><a href="https://www.bilibili.com/video/BV1rQ4y1S7hR/?spm_id_from=333.999.top_right_bar_window_history.content.click&vd_source=52f25fe6a2d8e15febcda4b70b5ff9d2" target="_blank" rel="noopener"><strong>视频地址</strong></a></p>
+<p><a href="https://www.bilibili.com/video/BV1rQ4y1S7hR/?spm_id_from=333.999.top_right_bar_window_history.content.click&amp;vd_source=52f25fe6a2d8e15febcda4b70b5ff9d2" target="_blank" rel="noopener">https://www.bilibili.com/video/BV1rQ4y1S7hR/?spm_id_from=333.999.top_right_bar_window_history.content.click&amp;vd_source=52f25fe6a2d8e15febcda4b70b5ff9d2</a></p>
+
+      
+    </div>
+    <footer class="article-footer">
+      <a data-url="http://wanghui.901web.com/2022/12/04/js-map-parseInt/" data-id="clb9ern2a00181qg9qh38nc29" class="article-share-link">Share</a>
+      
+      
+  <ul class="article-tag-list"><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/JS面试题/">JS面试题</a></li><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/map/">map</a></li><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/parseInt/">parseInt</a></li></ul>
+
+    </footer>
+  </div>
+  
+    
+<nav id="article-nav">
+  
+  
+    <a href="/2022/12/04/js-array-flatten/" id="article-nav-older" class="article-nav-link-wrap">
+      <strong class="article-nav-caption">Older</strong>
+      <div class="article-nav-title">js数组扁平化处理</div>
+    </a>
+  
+</nav>
+
+  
+</article>
+
+</section>
+        
+          <aside id="sidebar">
+  
+    
+
+  
+    
+  <div class="widget-wrap">
+    <h3 class="widget-title">标签</h3>
+    <div class="widget">
+      <ul class="tag-list"><li class="tag-list-item"><a class="tag-list-link" href="/tags/Array/">Array</a></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/CSS基础测试/">CSS基础测试</a></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/DOM/">DOM</a></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/DOM基础/">DOM基础</a></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/JS字符串/">JS字符串</a></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/JS数组/">JS数组</a></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/JS面试题/">JS面试题</a></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/Object/">Object</a></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/String/">String</a></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/css基础/">css基础</a></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/map/">map</a></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/parseInt/">parseInt</a></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/基础布局/">基础布局</a></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/拷贝相关/">拷贝相关</a></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/数组处理/">数组处理</a></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/树形结构-数组互转/">树形结构/数组互转</a></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/算法题目/">算法题目</a></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/类数组相关/">类数组相关</a></li></ul>
+    </div>
+  </div>
+
+
+  
+    
+  <div class="widget-wrap">
+    <h3 class="widget-title">标签云</h3>
+    <div class="widget tagcloud">
+      <a href="/tags/Array/" style="font-size: 18px;">Array</a> <a href="/tags/CSS基础测试/" style="font-size: 10px;">CSS基础测试</a> <a href="/tags/DOM/" style="font-size: 10px;">DOM</a> <a href="/tags/DOM基础/" style="font-size: 12px;">DOM基础</a> <a href="/tags/JS字符串/" style="font-size: 10px;">JS字符串</a> <a href="/tags/JS数组/" style="font-size: 20px;">JS数组</a> <a href="/tags/JS面试题/" style="font-size: 10px;">JS面试题</a> <a href="/tags/Object/" style="font-size: 16px;">Object</a> <a href="/tags/String/" style="font-size: 10px;">String</a> <a href="/tags/css基础/" style="font-size: 14px;">css基础</a> <a href="/tags/map/" style="font-size: 10px;">map</a> <a href="/tags/parseInt/" style="font-size: 10px;">parseInt</a> <a href="/tags/基础布局/" style="font-size: 10px;">基础布局</a> <a href="/tags/拷贝相关/" style="font-size: 10px;">拷贝相关</a> <a href="/tags/数组处理/" style="font-size: 10px;">数组处理</a> <a href="/tags/树形结构-数组互转/" style="font-size: 10px;">树形结构/数组互转</a> <a href="/tags/算法题目/" style="font-size: 12px;">算法题目</a> <a href="/tags/类数组相关/" style="font-size: 10px;">类数组相关</a>
+    </div>
+  </div>
+
+  
+    
+  <div class="widget-wrap">
+    <h3 class="widget-title">归档</h3>
+    <div class="widget">
+      <ul class="archive-list"><li class="archive-list-item"><a class="archive-list-link" href="/archives/2022/12/">十二月 2022</a></li><li class="archive-list-item"><a class="archive-list-link" href="/archives/2022/11/">十一月 2022</a></li><li class="archive-list-item"><a class="archive-list-link" href="/archives/2022/10/">十月 2022</a></li><li class="archive-list-item"><a class="archive-list-link" href="/archives/2022/04/">四月 2022</a></li><li class="archive-list-item"><a class="archive-list-link" href="/archives/2022/03/">三月 2022</a></li><li class="archive-list-item"><a class="archive-list-link" href="/archives/2021/12/">十二月 2021</a></li><li class="archive-list-item"><a class="archive-list-link" href="/archives/2021/11/">十一月 2021</a></li><li class="archive-list-item"><a class="archive-list-link" href="/archives/2021/09/">九月 2021</a></li><li class="archive-list-item"><a class="archive-list-link" href="/archives/2021/07/">七月 2021</a></li><li class="archive-list-item"><a class="archive-list-link" href="/archives/2019/08/">八月 2019</a></li></ul>
+    </div>
+  </div>
+
+
+  
+    
+  <div class="widget-wrap">
+    <h3 class="widget-title">最新文章</h3>
+    <div class="widget">
+      <ul>
+        
+          <li>
+            <a href="/2022/12/04/js-map-parseInt/">解析 [1, 2, 3].map(parseInt)【JS面试题】</a>
+          </li>
+        
+          <li>
+            <a href="/2022/12/04/js-array-flatten/">js数组扁平化处理</a>
+          </li>
+        
+          <li>
+            <a href="/2022/11/19/js-array-union-intersection-subtraction/">JavaScript数组求并集，交集和差集</a>
+          </li>
+        
+          <li>
+            <a href="/2022/11/19/js-groupBy/">JS实现Array.groupBy</a>
+          </li>
+        
+          <li>
+            <a href="/2022/10/30/filter-by-fields/">从对象数组中根据某一个字段进行筛选数据</a>
+          </li>
+        
+      </ul>
+    </div>
+  </div>
+
+  
+</aside>
+        
+      </div>
+      <footer id="footer">
+  
+  <div class="outer">
+    <div id="footer-info" class="inner">
+      &copy; 2022 pybyongbo<br>
+      Powered by <a href="http://hexo.io/" target="_blank">Hexo</a>
+    </div>
+  </div>
+</footer>
+    </div>
+    <nav id="mobile-nav">
+  
+    <a href="/" class="mobile-nav-link">Home</a>
+  
+    <a href="/archives" class="mobile-nav-link">Archives</a>
+  
+</nav>
+    
+
+<script src="//ajax.googleapis.com/ajax/libs/jquery/2.0.3/jquery.min.js"></script>
+
+
+  <link rel="stylesheet" href="/fancybox/jquery.fancybox.css">
+  <script src="/fancybox/jquery.fancybox.pack.js"></script>
+
+
+<script src="/js/script.js"></script>
+
+
+
+  </div>
+</body>
+</html>
